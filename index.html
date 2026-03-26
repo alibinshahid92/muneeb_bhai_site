@@ -12,8 +12,16 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta" id="stickyCta">
+        <p class="sticky-cta-text">Ready to transform your leadership team?</p>
+        <a href="#booking" class="btn btn-hero sticky-cta-btn">Book Your Free Call</a>
+        <button class="sticky-cta-close" id="stickyCtaClose" aria-label="Close">×</button>
+    </div>
+
     <!-- Header / Navigation -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">
@@ -26,7 +34,7 @@
                     <li><a href="#testimonials">Success Stories</a></li>
                     <li><a href="#coach">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#booking" class="btn btn-hero">Book a Strategy Call</a></li>
+                    <li><a href="#booking" class="btn btn-hero nav-cta">Book a Strategy Call</a></li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -39,33 +47,65 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Floating background shapes -->
+        <div class="hero-shapes" aria-hidden="true">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Turn Your Leadership Team Into a Competitive Advantage.</h1>
+                <div class="hero-badge">Leadership Team Coaching</div>
+                <h1 class="hero-title">
+                    <span class="hero-word">Turn</span>
+                    <span class="hero-word">Your</span>
+                    <span class="hero-word">Leadership</span>
+                    <span class="hero-word">Team</span>
+                    <span class="hero-word">Into</span>
+                    <span class="hero-word hero-word-accent">a Competitive</span>
+                    <span class="hero-word hero-word-accent">Advantage.</span>
+                </h1>
                 <p class="hero-subtitle">MARN's proven 3-step coaching process helps CEOs and their leadership teams break through silos, clarify strategy, and drive sustainable growth—without the guesswork.</p>
-                <a href="#booking" class="btn btn-hero">Book Your Free Discovery Call</a>
+                <div class="hero-cta-group">
+                    <a href="#booking" class="btn btn-hero shimmer-btn">Book Your Free Discovery Call</a>
+                    <a href="#solution" class="btn btn-outline-hero">See How It Works</a>
+                </div>
                 <p class="trust-line"><i class="fas fa-check-circle"></i> Trusted by leadership teams in Technology, Manufacturing, and Professional Services.</p>
             </div>
             <div class="hero-image">
-                <!-- Placeholder for hero image -->
                 <div class="image-placeholder">
-                    <img src="assets/images/business_deal.jpg" alt="Muneeb - Founder & CEO of MARN Business Growth Academy">
+                    <img src="assets/images/business_deal.jpg" alt="Leadership team in a strategy session">
+                    <div class="image-badge">
+                        <i class="fas fa-star"></i>
+                        <span>5-Star Rated</span>
+                        <small>50+ Teams Coached</small>
+                    </div>
                 </div>
             </div>
         </div>
+        <a href="#problem" class="scroll-indicator" id="scrollIndicator" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
     <!-- Problem We Solve -->
-    <section class="problem">
+    <section class="problem" id="problem">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-animate>
                 <h2>Is Your Leadership Team Holding You Back?</h2>
             </div>
             <div class="problem-grid">
-                <div class="problem-text">
+                <div class="problem-text" data-animate>
                     <p>You have the vision, but execution falls short. Decisions get stuck in silos. Your team works hard, but not always together. You feel like you're carrying the weight of growth alone.</p>
+                    <ul class="problem-list">
+                        <li><i class="fas fa-times-circle"></i> Misaligned priorities slowing decisions</li>
+                        <li><i class="fas fa-times-circle"></i> Silos blocking collaboration and trust</li>
+                        <li><i class="fas fa-times-circle"></i> Growth goals missed quarter after quarter</li>
+                        <li><i class="fas fa-times-circle"></i> CEO carrying the weight of execution alone</li>
+                    </ul>
                 </div>
-                <div class="problem-visual">
+                <div class="problem-visual" data-animate>
                     <div class="wheel-image">
                         <img src="assets/images/wheel.jpeg" alt="Business Growth Wheel Concept">
                     </div>
@@ -74,32 +114,74 @@
         </div>
     </section>
 
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-animate>
+                    <div class="stat-number-wrap">
+                        <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <p class="stat-label">Teams Coached</p>
+                </div>
+                <div class="stat-item" data-animate style="transition-delay:0.1s">
+                    <div class="stat-number-wrap">
+                        <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+                <div class="stat-item" data-animate style="transition-delay:0.2s">
+                    <div class="stat-number-wrap">
+                        <span class="stat-number" data-target="40">0</span><span class="stat-suffix">%</span>
+                    </div>
+                    <p class="stat-label">Avg. Growth Increase</p>
+                </div>
+                <div class="stat-item" data-animate style="transition-delay:0.3s">
+                    <div class="stat-number-wrap">
+                        <span class="stat-number" data-target="93">0</span><span class="stat-suffix">%</span>
+                    </div>
+                    <p class="stat-label">Report Better Alignment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Solution / How It Works -->
     <section id="solution" class="solution">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-animate>
                 <h2>The MARN Framework: A 3-Step Process to Alignment</h2>
+                <p class="section-subtitle">A structured, proven methodology that transforms how leadership teams operate.</p>
             </div>
             <div class="steps">
-                <div class="step">
+                <div class="step" data-animate>
+                    <span class="step-number">01</span>
                     <div class="step-icon">
                         <i class="fas fa-search"></i>
                     </div>
-                    <h3 class="step-title">1. Diagnose</h3>
+                    <h3 class="step-title">Diagnose</h3>
                     <p class="step-desc">We assess your current leadership dynamics, identify bottlenecks, and pinpoint exactly where your team is misaligned.</p>
                 </div>
-                <div class="step">
+                <div class="step-connector" aria-hidden="true">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="step" data-animate style="transition-delay:0.15s">
+                    <span class="step-number">02</span>
                     <div class="step-icon">
                         <i class="fas fa-sync-alt"></i>
                     </div>
-                    <h3 class="step-title">2. Align</h3>
+                    <h3 class="step-title">Align</h3>
                     <p class="step-desc">Through intensive workshops and coaching, we get your entire team on the same page regarding strategy, roles, and decision-making.</p>
                 </div>
-                <div class="step">
+                <div class="step-connector" aria-hidden="true">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="step" data-animate style="transition-delay:0.3s">
+                    <span class="step-number">03</span>
                     <div class="step-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <h3 class="step-title">3. Accelerate</h3>
+                    <h3 class="step-title">Accelerate</h3>
                     <p class="step-desc">We embed new habits and accountability structures so your team can execute faster and scale without you.</p>
                 </div>
             </div>
@@ -109,11 +191,13 @@
     <!-- Programs / Services -->
     <section class="programs">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-animate>
                 <h2>Coaching Programs for Leadership Teams</h2>
+                <p class="section-subtitle">Tailored programs for every stage of leadership growth.</p>
             </div>
             <div class="program-cards">
-                <div class="program-card">
+                <div class="program-card" data-animate>
+                    <div class="program-icon"><i class="fas fa-users"></i></div>
                     <h3 class="program-title">The Leadership Accelerator</h3>
                     <p class="program-subtitle">For new and mid‑level leadership teams</p>
                     <ul class="program-features">
@@ -121,9 +205,10 @@
                         <li><i class="fas fa-check-circle"></i> Improve cross‑functional communication</li>
                         <li><i class="fas fa-check-circle"></i> Build a unified leadership culture</li>
                     </ul>
-                    <a href="#" class="program-link">Learn more about this program →</a>
+                    <a href="#booking" class="program-link">Book a Discovery Call</a>
                 </div>
-                <div class="program-card highlighted">
+                <div class="program-card highlighted" data-animate style="transition-delay:0.15s">
+                    <div class="program-icon"><i class="fas fa-chart-line"></i></div>
                     <h3 class="program-title">The Strategic Growth Intensive</h3>
                     <p class="program-subtitle">For executive teams and company founders</p>
                     <ul class="program-features">
@@ -131,7 +216,7 @@
                         <li><i class="fas fa-check-circle"></i> Align the C‑suite on key priorities</li>
                         <li><i class="fas fa-check-circle"></i> Create an accountability system for growth goals</li>
                     </ul>
-                    <a href="#" class="program-link">Learn more about this program →</a>
+                    <a href="#booking" class="program-link">Book a Discovery Call</a>
                 </div>
             </div>
         </div>
@@ -140,7 +225,7 @@
     <!-- Social Proof & Testimonials -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-animate>
                 <h2>Results That Speak for Themselves</h2>
                 <div class="rating">
                     <span class="stars">
@@ -153,39 +238,62 @@
                     <span class="rating-text">Rated 5 Stars by 50+ Leadership Teams</span>
                 </div>
             </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The Strategic Growth Intensive didn't just change our strategy; it changed how we work together as an executive team. We've grown 40% faster as a result."</p>
+
+            <div class="testimonial-carousel" data-animate>
+                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="testimonial-slide active">
+                        <div class="quote-mark">&ldquo;</div>
+                        <p class="testimonial-text">The Strategic Growth Intensive didn't just change our strategy; it changed how we work together as an executive team. We've grown 40% faster as a result.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar-initials">SJ</div>
+                            <div class="author-info">
+                                <h4>Sarah Jenkins</h4>
+                                <p>CTO, InnovateTech Solutions</p>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-author">                        
-                        <div class="author-info">
-                            <h4>Sarah Jenkins</h4>
-                            <p>CTO, InnovateTech Solutions</p>
+                    <div class="testimonial-slide">
+                        <div class="quote-mark">&ldquo;</div>
+                        <p class="testimonial-text">MARN's framework gave us the clarity and alignment we desperately needed. Our leadership team now operates with a shared vision and measurable results.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar-initials">MR</div>
+                            <div class="author-info">
+                                <h4>Michael Rodriguez</h4>
+                                <p>CEO, GrowthEdge Manufacturing</p>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="quote-mark">&ldquo;</div>
+                        <p class="testimonial-text">The coaching transformed our communication and decision-making. We're now able to execute faster and with more confidence than ever before.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar-initials">PS</div>
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Founder, Atlas Consulting Group</p>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"MARN's framework gave us the clarity and alignment we desperately needed. Our leadership team now operates with a shared vision and measurable results."</p>
-                    </div>
-                    <div class="testimonial-author">                        
-                        <div class="author-info">
-                            <h4>Michael Rodriguez</h4>
-                            <p>CEO, GrowthEdge Manufacturing</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The coaching transformed our communication and decision-making. We're now able to execute faster and with more confidence than ever before."</p>
-                    </div>
-                    <div class="testimonial-author">                        
-                        <div class="author-info">
-                            <h4>Priya Sharma</h4>
-                            <p>Founder, Atlas Consulting Group</p>
-                        </div>
-                    </div>
+                <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-dots" id="carouselDots">
+                    <button class="dot active" data-index="0" aria-label="Go to testimonial 1"></button>
+                    <button class="dot" data-index="1" aria-label="Go to testimonial 2"></button>
+                    <button class="dot" data-index="2" aria-label="Go to testimonial 3"></button>
                 </div>
             </div>
         </div>
@@ -195,14 +303,30 @@
     <section id="coach" class="coach">
         <div class="container">
             <div class="coach-grid">
-                <div class="coach-image">
-                    <img src="assets/images/muneeb_bhai.png" alt="Muneeb Bhai - Founder & CEO of MARN Business Growth Academy">
+                <div class="coach-image-wrap" data-animate>
+                    <div class="coach-image">
+                        <img src="assets/images/muneeb_bhai.png" alt="Muneeb - Founder & CEO of MARN Business Growth Academy">
+                    </div>
+                    <div class="coach-credentials">
+                        <div class="credential">
+                            <i class="fas fa-award"></i>
+                            <span>15+ Years</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-users"></i>
+                            <span>50+ Teams</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-globe"></i>
+                            <span>3 Industries</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="coach-content">
+                <div class="coach-content" data-animate>
                     <h2 class="section-title">Meet Your Coach</h2>
                     <h3 class="coach-name">Hi, I'm Muneeb, founder of MARN Business Growth Academy.</h3>
                     <p>I've been where you are. With over 15 years of experience leading successful business transformations, I've worked with leadership teams across multiple industries to achieve breakthrough growth. I created MARN to share the proven frameworks and strategies that turn leadership teams into competitive advantages. My approach is practical, proven, and always focused on delivering measurable real‑world results for your business.</p>
-                    <a href="#booking" class="btn btn-primary">Schedule a Conversation</a>
+                    <a href="#booking" class="btn btn-primary shimmer-btn">Schedule a Conversation</a>
                 </div>
             </div>
         </div>
@@ -211,12 +335,12 @@
     <!-- Booking Section -->
     <section id="booking" class="booking">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-animate>
                 <h2>Book Your Free Discovery Call</h2>
                 <p class="booking-subtitle">Choose a convenient time for a 30-minute strategy session with Muneeb.</p>
             </div>
             <div class="booking-container">
-                <div class="booking-placeholder">
+                <div class="booking-placeholder" data-animate>
                     <div class="placeholder-content">
                         <i class="fas fa-calendar-alt"></i>
                         <h3>Schedule Your Discovery Call</h3>
@@ -231,7 +355,7 @@
                         <p class="booking-note">Your session will be confirmed immediately after booking. You'll receive a calendar invite with meeting details.</p>
                     </div>
                 </div>
-                <div class="booking-info">
+                <div class="booking-info" data-animate style="transition-delay:0.15s">
                     <h3>What to expect in your call:</h3>
                     <ul>
                         <li><i class="fas fa-check-circle"></i> <strong>15 minutes</strong> - Understanding your leadership challenges</li>
